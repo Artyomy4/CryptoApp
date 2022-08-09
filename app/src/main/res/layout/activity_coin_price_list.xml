@@ -7,11 +7,16 @@
     android:background="@color/gray_main"
     tools:context=".CoinPriceListActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCoinPriceList"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:loyoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_coin_info" />
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCoinPriceList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_coin_info" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

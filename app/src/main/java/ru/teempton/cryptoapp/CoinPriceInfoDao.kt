@@ -9,7 +9,7 @@ import ru.teempton.cryptoapp.pojo.CoinPriceInfo
 
 @Dao
 interface CoinPriceInfoDao {
-    @Query("SELECT * FROM full_price_list ORDER BY lastupdate")
+    @Query("SELECT * FROM full_price_list ORDER BY lastupdate DESC")
     fun getPriceList():LiveData<List<CoinPriceInfo>>
 
     @Query("SELECT * FROM full_price_list WHERE fromsymbol==:fSym LIMIT 1")

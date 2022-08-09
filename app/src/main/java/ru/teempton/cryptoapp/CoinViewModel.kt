@@ -41,7 +41,7 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
                 .subscribeOn(Schedulers.io())
                 .subscribe({
                     db.coinPriceInfoDao().insertPriceList(it)
-                    Log.d("MyLog", "Success: $it")
+                    //Log.d("MyLog", "Success: $it")
                 }, {
                     Log.d("MyLog", "Failure: ${it.message.toString()}")
                 })
